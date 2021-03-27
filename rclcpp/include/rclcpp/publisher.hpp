@@ -387,7 +387,7 @@ public:
    * \param loaned_msg The LoanedMessage instance to be published.
    */
   void
-  publish(rclcpp::LoanedMessage<MessageT, AllocatorT> && loaned_msg)
+  publish(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
   {
     if (!loaned_msg.is_valid()) {
       throw std::runtime_error("loaned message is not valid");
